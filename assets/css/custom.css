@@ -1,0 +1,71 @@
+.tgmenu__nav .logo img {
+	max-height: 85px;
+}
+.tgmenu__navbar-wrap {
+	justify-content: center;
+}
+.tgmenu__navbar-wrap > ul {
+	margin: 0 0 0 0px;
+}
+.tgmenu__navbar-wrap > ul > li a {
+	font-size: 17px;
+	font-weight: 600;
+}
+.tgmobile__menu-bottom {
+	margin-top: 30px;
+}
+.tgmobile__menu .nav-logo img {
+	max-height: 70px;
+}
+.offCanvas__logo img {
+	max-height: 75px;
+}
+.slider__area {
+	padding-top: 146px;
+}
+.everypage-top {
+	margin-top: 146px;
+}
+.fw-logo img {
+	max-height: 85px;
+}
+@media (max-width: 991.98px) {
+	.tg-header__area {
+		padding: 10px 0;
+	}
+	.slider__area {
+		padding-top: 181px;
+	}
+	.everypage-top {
+		margin-top: 181px;
+	}
+	.request__content-two {
+		margin-bottom: 40px;
+	}
+}
+@media (max-width: 768px) {
+	.slider__area {
+		padding-top: 105px !important;
+	}
+	.everypage-top {
+		margin-top: 105px !important;
+	}
+}
+
+/* Translate Styling */
+
+.goog-te-gadget .goog-te-combo {
+	margin: 4px 0;
+	width: 134px;
+	padding: 7px 5px;
+}
+
+.translate-styling {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tgmobile__menu .nav-logo {
+	padding-bottom: 10px;
+}
