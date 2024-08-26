@@ -822,6 +822,29 @@
 		<script src="assets/js/wow.min.js"></script>
 		<script src="assets/js/aos.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script type="text/javascript">
+			var vpageLanguageBody = "en";
+			var vincludedLanguagesBody = "ar,en"; // Include your desired languages for the body
+			var vautoDisplayBody = true;
+			var vmultilanguagePageBody = true;
+			var vgaTrackBody = true;
+			var vgaIdBody = true ? "" : "";
+
+			function googleTranslateElementInitBody() {
+				new google.translate.TranslateElement(
+					{
+						pageLanguage: vpageLanguageBody,
+						includedLanguages: vincludedLanguagesBody,
+						layout: google.translate.TranslateElement.InlineLayout.VERTICAL,
+						autoDisplay: vautoDisplayBody,
+						multilanguagePage: vmultilanguagePageBody,
+						gaTrack: vgaTrackBody,
+						gaId: vgaIdBody,
+					},
+					"google_translate_element_body"
+				);
+			}
+		</script>
 	</body>
 
 	<!-- Mirrored from apexa-html-demo.vercel.app/contact by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Aug 2024 05:04:18 GMT -->
