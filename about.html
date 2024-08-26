@@ -4,8 +4,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="x-ua-compatible" content="ie=edge" />
-		<title>Global Manpower Resources</title>
-		<meta name="description" content="Global Manpower Resources" />
+		<title>Touch Travel</title>
+		<meta name="description" content="Touch Travel" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link
 			rel="shortcut icon"
@@ -25,8 +25,54 @@
 		<link rel="stylesheet" href="assets/css/default.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
+		<script type="text/javascript">
+			var vpageLanguageHeader = "en";
+			var vincludedLanguagesHeader = "ar,en"; // Include your desired languages for the header
+			var vautoDisplayHeader = true;
+			var vmultilanguagePageHeader = true;
+			var vgaTrackHeader = true;
+			var vgaIdHeader = true ? "" : "";
+
+			function googleTranslateElementInitHeader() {
+				new google.translate.TranslateElement(
+					{
+						pageLanguage: vpageLanguageHeader,
+						includedLanguages: vincludedLanguagesHeader,
+						layout: google.translate.TranslateElement.InlineLayout.VERTICAL,
+						autoDisplay: vautoDisplayHeader,
+						multilanguagePage: vmultilanguagePageHeader,
+						gaTrack: vgaTrackHeader,
+						gaId: vgaIdHeader,
+					},
+					"google_translate_element_header"
+				);
+			}
+		</script>
 	</head>
 	<body>
+		<script>
+			// Function to dynamically load scripts based on window width
+			function loadTranslateScript() {
+				if (window.innerWidth > 1200) {
+					// Load header script
+					var headerScript = document.createElement("script");
+					headerScript.type = "text/javascript";
+					headerScript.src =
+						"//translate.google.com/translate_a/element.js?cb=googleTranslateElementInitHeader";
+					document.head.appendChild(headerScript);
+				} else {
+					// Load body script
+					var bodyScript = document.createElement("script");
+					bodyScript.type = "text/javascript";
+					bodyScript.src =
+						"//translate.google.com/translate_a/element.js?cb=googleTranslateElementInitBody";
+					document.head.appendChild(bodyScript);
+				}
+			}
+
+			// Call the function when the page loads
+			window.onload = loadTranslateScript;
+		</script>
 		<!--Preloader-->
 		<div id="preloader">
 			<div id="loader" class="loader">
@@ -102,16 +148,53 @@
 									>
 										<ul class="navigation">
 											<li><a href="index.html">home</a></li>
-											<li class="active"><a href="about.html">About Us</a></li>
-											<li>
-												<a href="services.html">services</a>
+											<li class="active"><a href="about.html">about us</a></li>
+											<li class="menu-item-has-children">
+												<a href="services.html">Our services</a>
+												<ul class="sub-menu">
+													<li>
+														<a href="service-1.html"
+															>The Best Recruitment Office India</a
+														>
+													</li>
+													<li>
+														<a href="service-2.html"
+															>Office Recruitment India Riyadh</a
+														>
+													</li>
+												</ul>
 											</li>
-											<li><a href="team.html">Our Teams</a></li>
-											<li><a href="contact.html">contacts</a></li>
+											<li><a href="agency.html">Agency</a></li>
+											<li>
+												<a href="employment-source.html">Employment Source</a>
+											</li>
+											<li><a href="clients.html">Our Clients</a></li>
+											<li class="menu-item-has-children">
+												<a href="#">Blog</a>
+												<ul class="sub-menu">
+													<li>
+														<a href="blog-1.html">
+															Agencies india mumbai and new delhi</a
+														>
+													</li>
+													<li>
+														<a href="blog-2.html"
+															>Recruitment office india mumbai and new delhi</a
+														>
+													</li>
+												</ul>
+											</li>
 										</ul>
 									</div>
 									<div class="tgmenu__action d-none d-md-block">
 										<ul class="list-wrap">
+											<a
+												id="google_translate_element_header"
+												style="font-size: 12px; padding-left: 20px; color: #000"
+												><span style="font-size: 12px"
+													>Translate this page to
+												</span></a
+											>
 											<li class="offCanvas-menu">
 												<a href="javascript:void(0)" class="menu-tigger">
 													<svg
@@ -158,10 +241,15 @@
 													</svg>
 												</a>
 											</li>
-											<li class="header-btn">
-												<a href="contact.html" class="btn">let’s Talk</a>
-											</li>
 										</ul>
+									</div>
+									<div
+										class="icon-custom d-block d-md-none"
+										style="margin-top: 12px"
+									>
+										<a href="tel:+916392896232"
+											><i class="flaticon-phone-call"></i
+										></a>
 									</div>
 									<div class="mobile-nav-toggler">
 										<svg
@@ -208,6 +296,15 @@
 										</svg>
 									</div>
 								</nav>
+								<div class="translate-styling d-block d-md-none">
+									<a
+										id="google_translate_element_body"
+										style="font-size: 12px; padding-left: 20px; color: #000"
+										><span style="font-size: 12px"
+											>Translate this page to
+										</span></a
+									>
+								</div>
 							</div>
 							<!-- Mobile Menu  -->
 							<div class="tgmobile__menu">
@@ -365,7 +462,7 @@
 			<!-- about-area -->
 			<section
 				id="about"
-				class="about__area-three about__bg-two"
+				class="about__area-three about__bg-two pb-0"
 				data-background="assets/img/bg/h3_about_bg.jpg"
 			>
 				<div class="container">
@@ -393,17 +490,17 @@
 									class="section-title mb-25 tg-heading-subheading animation-style3"
 								>
 									<span class="sub-title">About Our Company</span>
-									<h2 class="title tg-element-title">
+									<h2 class="title-new">
 										Your Partner for Quality Recruitment and Staffing
 									</h2>
 								</div>
 								<p>
-									At Global Manpower Resources, we assemble a team of qualified
-									professionals dedicated to selecting the best candidates for
-									our clients. Whether for skilled or unskilled roles, we employ
-									rigorous recruitment methods to provide top-tier manpower,
-									enhancing your business operations. Our reputation has grown
-									through a steadfast commitment to quality and excellence.
+									At Touch Travel, we assemble a team of qualified professionals
+									dedicated to selecting the best candidates for our clients.
+									Whether for skilled or unskilled roles, we employ rigorous
+									recruitment methods to provide top-tier manpower, enhancing
+									your business operations. Our reputation has grown through a
+									steadfast commitment to quality and excellence.
 								</p>
 								<p>
 									This overview reflects our strong foundation and commitment to
@@ -447,97 +544,44 @@
 				</div>
 			</section>
 			<!-- about-area-end -->
-			<!-- counter-area -->
-			<section class="counter-area">
+			<!-- features-area -->
+			<section class="features__area-two">
 				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-xl-3 col-lg-4 col-sm-6">
-							<div class="counter-item">
-								<div class="icon">
-									<i class="flaticon-trophy"></i>
+					<div class="row gutter-24 justify-content-center">
+						<div class="col-lg-6 col-md-6">
+							<div class="features__item-two">
+								<div class="features__icon-two">
+									<i class="flaticon-targeted"></i>
 								</div>
-								<div class="content">
-									<h2 class="count">
-										<span class="odometer" data-count="45"></span>+
-									</h2>
+								<div class="features__content-two">
+									<h4 class="title">Our Vision</h4>
 									<p>
-										Successfully <br />
-										Completed Projects
+										To have leadership in the field of developing human
+										resources operations for companies and institutions of all
+										sizes at the local and regional levels.
 									</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-3 col-lg-4 col-sm-6">
-							<div class="counter-item">
-								<div class="icon">
-									<i class="flaticon-happy"></i>
+						<div class="col-lg-6 col-md-6">
+							<div class="features__item-two">
+								<div class="features__icon-two">
+									<i class="flaticon-handshake"></i>
 								</div>
-								<div class="content">
-									<h2 class="count">
-										<span class="odometer" data-count="92"></span>K
-									</h2>
+								<div class="features__content-two">
+									<h4 class="title">Our Mission</h4>
 									<p>
-										Satisfied <br />
-										100% Our Clients
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-3 col-lg-4 col-sm-6">
-							<div class="counter-item">
-								<div class="icon">
-									<i class="flaticon-china"></i>
-								</div>
-								<div class="content">
-									<h2 class="count">
-										<span class="odometer" data-count="19"></span>+
-									</h2>
-									<p>
-										All Over The World <br />
-										We Are Available
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-3 col-lg-4 col-sm-6">
-							<div class="counter-item">
-								<div class="icon">
-									<i class="flaticon-time"></i>
-								</div>
-								<div class="content">
-									<h2 class="count">
-										<span class="odometer" data-count="25"></span>+
-									</h2>
-									<p>
-										Years of Experiences <br />
-										To Run This Company
+										Deliver top-quality human resources services using
+										international best practices, guided by expert
+										professionals.
 									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="counter-shape-wrap">
-					<img
-						src="assets/img/images/counter_shape01.png"
-						alt=""
-						data-aos="fade-right"
-						data-aos-delay="400"
-					/>
-					<img
-						src="assets/img/images/counter_shape02.png"
-						alt=""
-						data-parallax='{"x" : 100 , "y" : -100 }'
-					/>
-					<img
-						src="assets/img/images/counter_shape03.png"
-						alt=""
-						data-aos="fade-left"
-						data-aos-delay="400"
-					/>
-				</div>
 			</section>
-			<!-- counter-area-end -->
+			<!-- features-area-end -->
 			<!-- request-area -->
 			<section
 				class="request-area request-bg"
@@ -549,7 +593,7 @@
 							<div
 								class="request-content text-center tg-heading-subheading animation-style3"
 							>
-								<h2 class="title tg-element-title">
+								<h2 class="title-new text-white pb-4">
 									Get the perfect manpower solution tailored to your needs
 									today!
 								</h2>
@@ -587,402 +631,110 @@
 				</div>
 			</section>
 			<!-- request-area-end -->
-			<!-- team-area -->
-			<section class="team__area-four">
+			<!-- FAQ -->
+			<section class="faqs__area-six">
+				<div class="circle" data-parallax='{"x" : 100 , "y" : 100 }'></div>
 				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-lg-6">
-							<div
-								class="section-title text-center mb-40 tg-heading-subheading animation-style3"
-							>
-								<span class="sub-title">MEET OUR TEAM</span>
-								<h2 class="title tg-element-title">
-									Business Expertise Is Here <br />
-									For You Can Trust
-								</h2>
+					<div class="row align-items-center">
+						<div class="col-lg-6 mb-30">
+							<div class="box-need-help">
+								<img src="assets/img/global/goals.jpg" />
 							</div>
 						</div>
-					</div>
-					<div class="row justify-content-center">
-						<div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-							<div class="team__item-four shine-animate-item">
-								<div class="team__thumb-four shine-animate">
-									<img src="assets/img/team/h4_team_img01.jpg" alt="" />
-								</div>
-								<div class="team__content-four">
-									<h2 class="title"><a href="team-details">Floyd Miles</a></h2>
-									<span>Finance Advisor</span>
-									<div class="team__social-four">
-										<ul class="list-wrap">
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-facebook-f"></i
-												></a>
-											</li>
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-twitter"></i
-												></a>
-											</li>
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-instagram"></i
-												></a>
-											</li>
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-pinterest-p"></i
-												></a>
-											</li>
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-linkedin-in"></i
-												></a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-							<div class="team__item-four shine-animate-item">
-								<div class="team__thumb-four shine-animate">
-									<img src="assets/img/team/h4_team_img02.jpg" alt="" />
-								</div>
-								<div class="team__content-four">
-									<h2 class="title">
-										<a href="team-details">Ralph Edwards</a>
-									</h2>
-									<span>Finance Advisor</span>
-									<div class="team__social-four">
-										<ul class="list-wrap">
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-facebook-f"></i
-												></a>
-											</li>
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-twitter"></i
-												></a>
-											</li>
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-instagram"></i
-												></a>
-											</li>
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-pinterest-p"></i
-												></a>
-											</li>
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-linkedin-in"></i
-												></a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-							<div class="team__item-four shine-animate-item">
-								<div class="team__thumb-four shine-animate">
-									<img src="assets/img/team/h4_team_img03.jpg" alt="" />
-								</div>
-								<div class="team__content-four">
-									<h2 class="title"><a href="team-details">Eleanor Pena</a></h2>
-									<span>Finance Advisor</span>
-									<div class="team__social-four">
-										<ul class="list-wrap">
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-facebook-f"></i
-												></a>
-											</li>
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-twitter"></i
-												></a>
-											</li>
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-instagram"></i
-												></a>
-											</li>
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-pinterest-p"></i
-												></a>
-											</li>
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-linkedin-in"></i
-												></a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-							<div class="team__item-four shine-animate-item">
-								<div class="team__thumb-four shine-animate">
-									<img src="assets/img/team/h4_team_img04.jpg" alt="" />
-								</div>
-								<div class="team__content-four">
-									<h2 class="title"><a href="team-details">Jone Cooper</a></h2>
-									<span>Finance Advisor</span>
-									<div class="team__social-four">
-										<ul class="list-wrap">
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-facebook-f"></i
-												></a>
-											</li>
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-twitter"></i
-												></a>
-											</li>
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-instagram"></i
-												></a>
-											</li>
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-pinterest-p"></i
-												></a>
-											</li>
-											<li>
-												<a href="javascript:void(0)"
-													><i class="fab fa-linkedin-in"></i
-												></a>
-											</li>
-										</ul>
-									</div>
-								</div>
+						<div class="col-lg-6 mb-30">
+							<div class="box-faq-right">
+								<h1 class="title tg-element-title mb-10">Our Goals</h1>
+								<p class="tg-element-title mb-20">
+									Our Goals We work to offer a set of solutions in the field of
+									human resources in order to help you develop skills in a set
+									of fields, and among our goals.
+								</p>
+								<p class="tg-element-title mb-10">
+									We work to offer a set of solutions in the field of human
+									resources in order to help you develop skills in a set of
+									fields, and among our goals: Working to raise the level of
+									production
+								</p>
+								<p class="tg-element-title mb-10">
+									Working to raise the level of production Determining employee
+									success standards.
+								</p>
+								<p class="tg-element-title mb-10">
+									Determining employee success standards. working to enhance the
+									effectiveness of human resource management.
+								</p>
+								<p class="tg-element-title mb-10">
+									working to enhance the effectiveness of human resource
+									management. Helping employees to achieve their goal.
+								</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- team-area-end -->
-			<!-- testimonial-area -->
-			<section class="testimonial__area-three">
+			<!-- End FAQ -->
+			<!-- choose-area -->
+			<section class="choose-area">
 				<div class="container">
 					<div class="row align-items-center">
-						<div class="col-lg-6">
-							<div class="testimonial__form">
-								<h2 class="title">Get a Quote</h2>
-								<form action="#">
-									<div class="form-grp">
-										<input type="text" placeholder="Full Name" />
-									</div>
-									<div class="form-grp">
-										<input type="email" placeholder="E-mail" />
-									</div>
-									<div class="form-grp">
-										<input type="text" placeholder="Phone" />
-									</div>
-									<button type="submit" class="btn mt-2">
-										Request a Quote
-									</button>
-								</form>
+						<div class="col-lg-6 order-0 order-lg-2">
+							<div class="choose-img-wrap">
+								<img src="assets/img/images/choose_img01.jpg" alt="" />
 							</div>
 						</div>
 						<div class="col-lg-6">
-							<div class="testimonial__wrap">
-								<div class="testimonial__inner-top d-none">
-									<div class="testimonial-slider-dot">
-										<div class="swiper testimonial__nav-three">
-											<div class="swiper-wrapper">
-												<div class="swiper-slide">
-													<button>
-														<img
-															src="assets/img/images/testi_avatar01.png"
-															alt=""
-														/>
-													</button>
-												</div>
-												<div class="swiper-slide">
-													<button>
-														<img
-															src="assets/img/images/testi_avatar02.png"
-															alt=""
-														/>
-													</button>
-												</div>
-												<div class="swiper-slide">
-													<button>
-														<img
-															src="assets/img/images/testi_avatar03.png"
-															alt=""
-														/>
-													</button>
-												</div>
-												<div class="swiper-slide">
-													<button>
-														<img
-															src="assets/img/images/testi_avatar04.png"
-															alt=""
-														/>
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="icon"><i class="fas fa-quote-right"></i></div>
+							<div class="choose-content">
+								<div
+									class="section-title white-title mb-30 tg-heading-subheading animation-style3"
+								>
+									<span class="sub-title">Why We Are The Best</span>
+									<h2 class="title-new text-white">Why Choose Us</h2>
 								</div>
-								<div class="swiper-container testimonial-active-three">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="testimonial-item testimonial__item-four">
-												<div class="testimonial-info">
-													<h4 class="title">Hassan Al-Mansour</h4>
-													<span>Chief HR Officer</span>
-												</div>
-												<div class="testimonial__rating">
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-												</div>
-												<div class="testimonial-content">
-													<p>
-														“ Global Manpower Resources has been a game-changer
-														for our recruitment process. They consistently
-														provide us with highly qualified candidates who fit
-														our job requirements perfectly. Their attention to
-														detail and commitment to quality are truly
-														commendable.”
-													</p>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="testimonial-item testimonial__item-four">
-												<div class="testimonial-info">
-													<h4 class="title">Ahmed Al-Fahad</h4>
-													<span>Operations Director</span>
-												</div>
-												<div class="testimonial__rating">
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-												</div>
-												<div class="testimonial-content">
-													<p>
-														“ Working with Global Manpower Resources has
-														significantly improved our hiring efficiency. Their
-														ability to understand our needs and deliver
-														top-notch candidates within tight deadlines is
-														impressive. We consider them a trusted partner in
-														our growth.”
-													</p>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="testimonial-item testimonial__item-four">
-												<div class="testimonial-info">
-													<h4 class="title">Leila El-Sayed</h4>
-													<span>Talent Acquisition Head</span>
-												</div>
-												<div class="testimonial__rating">
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-												</div>
-												<div class="testimonial-content">
-													<p>
-														“ The team at Global Manpower Resources is highly
-														professional and reliable. They go above and beyond
-														to ensure that the candidates they provide are not
-														only qualified but also a great fit for our company
-														culture. We couldn't ask for better service.”
-													</p>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="testimonial-item testimonial__item-four">
-												<div class="testimonial-info">
-													<h4 class="title">Mohammed Khalid</h4>
-													<span>Human Resources Manager</span>
-												</div>
-												<div class="testimonial__rating">
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-												</div>
-												<div class="testimonial-content">
-													<p>
-														“ I’ve been extremely satisfied with the level of
-														service and quality of candidates we’ve received
-														from Global Manpower Resources. They have made our
-														recruitment process seamless and stress-free, which
-														has been invaluable to our company.”
-													</p>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="testimonial-item testimonial__item-four">
-												<div class="testimonial-info">
-													<h4 class="title">Noura Al-Zahrani</h4>
-													<span>Recruitment Specialist</span>
-												</div>
-												<div class="testimonial__rating">
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-													<i class="fas fa-star"></i>
-												</div>
-												<div class="testimonial-content">
-													<p>
-														“ Global Manpower Resources has consistently
-														delivered excellent results for our recruitment
-														needs. Their thorough vetting process and
-														understanding of our industry ensure that we always
-														get the best candidates.”
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="testimonial__nav-four">
-										<div class="testimonial-two-button-prev">
-											<i class="flaticon-right-arrow"></i>
-										</div>
-										<div class="testimonial-two-button-next">
-											<i class="flaticon-right-arrow"></i>
-										</div>
-									</div>
-								</div>
+								<p class="w-100" style="margin-bottom: 15px">
+									Why Choose Us? Over the years, Touch Travel have achieving
+									great successes in the field of employment solutions and
+									provide innovative strategies with the help of a team of
+									specialists in various fields, and there are many reasons that
+									contributed to our distinction and make you choose us, among
+									them:
+								</p>
+								<p class="w-100" style="margin-bottom: 15px">
+									Why Choose Us? Trust and good appreciation for all customers.
+								</p>
+								<p class="w-100" style="margin-bottom: 15px">
+									Our primary focus is on offering outstanding value to
+									customers.
+								</p>
+								<p class="w-100" style="margin-bottom: 15px">
+									Commitment to the frameworks of quality, innovation and
+									excellence in service delivery.
+								</p>
+								<p class="w-100" style="margin-bottom: 15px">
+									Providing customers with the most comprehensive knowledge.
+								</p>
+								<p class="w-100">
+									Striving for excellence in order to achieve the best results.
+								</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="testimonial__shape-three">
+				<div class="choose-shape-wrap">
 					<img
-						src="assets/img/images/h4_testimonial_shape.png"
+						src="assets/img/images/choose_shape01.png"
 						alt=""
-						class="rotateme"
+						data-aos="fade-right"
+						data-aos-delay="400"
+					/>
+					<img
+						src="assets/img/images/choose_shape02.png"
+						alt=""
+						data-aos="fade-left"
+						data-aos-delay="400"
 					/>
 				</div>
 			</section>
-			<!-- testimonial-area-end -->
+			<!-- choose-area-end -->
 		</main>
 		<!-- main-area-end -->
 		<!-- footer-area -->
@@ -1000,9 +752,9 @@
 									</div>
 									<div class="footer-content">
 										<p>
-											At Global Manpower Resources, we pride ourselves on
-											assembling a team of experts dedicated to selecting the
-											best candidates for our clients.
+											At Touch Travel, we pride ourselves on assembling a team
+											of experts dedicated to selecting the best candidates for
+											our clients.
 										</p>
 										<div class="footer-social">
 											<ul class="list-wrap">
@@ -1040,6 +792,7 @@
 													<i class="flaticon-phone-call"></i>
 												</div>
 												<div class="content">
+													<p>Call Us Now</p>
 													<a href="tel:+916392896232">+91 6392896232</a>
 												</div>
 											</li>
@@ -1048,6 +801,7 @@
 													<i class="flaticon-envelope"></i>
 												</div>
 												<div class="content">
+													<p>Email Us Now</p>
 													<a href="mailto:khannaushad2818@gmail.com"
 														>khannaushad2818@gmail.com</a
 													>
@@ -1075,8 +829,13 @@
 										<ul class="list-wrap">
 											<li><a href="index.html">Home</a></li>
 											<li><a href="about.html">About Us</a></li>
-											<li><a href="services.html">Services</a></li>
-											<li><a href="team.html">Team</a></li>
+											<li><a href="services.html">Our Services</a></li>
+											<li><a href="agency.html">Agency</a></li>
+											<li>
+												<a href="employment-source.html">Employment Source</a>
+											</li>
+											<li><a href="clients.html">Our Clients</a></li>
+											<li><a href="blog-1.html">Blog</a></li>
 											<li><a href="contact.html">Contact Us</a></li>
 										</ul>
 									</div>
@@ -1136,21 +895,17 @@
 						</div>
 					</div>
 				</div>
-				<div class="footer-bottom">
+				<!-- <div class="footer-bottom">
 					<div class="container">
 						<div class="row align-items-center">
 							<div class="col-lg-12">
 								<div class="copyright-text text-center">
-									<p>
-										Copyright ©
-										<a href="index.html">Global Manpower Resources</a> | All
-										Right Reserved
-									</p>
+									<p>All Right Reserved</p>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<div class="footer-shape">
 					<img
 						src="assets/img/images/footer_shape01.png"
@@ -1189,6 +944,29 @@
 		<script src="assets/js/wow.min.js"></script>
 		<script src="assets/js/aos.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script type="text/javascript">
+			var vpageLanguageBody = "en";
+			var vincludedLanguagesBody = "ar,en"; // Include your desired languages for the body
+			var vautoDisplayBody = true;
+			var vmultilanguagePageBody = true;
+			var vgaTrackBody = true;
+			var vgaIdBody = true ? "" : "";
+
+			function googleTranslateElementInitBody() {
+				new google.translate.TranslateElement(
+					{
+						pageLanguage: vpageLanguageBody,
+						includedLanguages: vincludedLanguagesBody,
+						layout: google.translate.TranslateElement.InlineLayout.VERTICAL,
+						autoDisplay: vautoDisplayBody,
+						multilanguagePage: vmultilanguagePageBody,
+						gaTrack: vgaTrackBody,
+						gaId: vgaIdBody,
+					},
+					"google_translate_element_body"
+				);
+			}
+		</script>
 	</body>
 
 	<!-- Mirrored from apexa-html-demo.vercel.app/about-5 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Aug 2024 05:04:02 GMT -->

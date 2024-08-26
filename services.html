@@ -4,8 +4,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="x-ua-compatible" content="ie=edge" />
-		<title>Global Manpower Resources</title>
-		<meta name="description" content="Global Manpower Resources" />
+		<title>Touch Travel</title>
+		<meta name="description" content="Touch Travel" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link
 			rel="shortcut icon"
@@ -25,8 +25,54 @@
 		<link rel="stylesheet" href="assets/css/default.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
+		<script type="text/javascript">
+			var vpageLanguageHeader = "en";
+			var vincludedLanguagesHeader = "ar,en"; // Include your desired languages for the header
+			var vautoDisplayHeader = true;
+			var vmultilanguagePageHeader = true;
+			var vgaTrackHeader = true;
+			var vgaIdHeader = true ? "" : "";
+
+			function googleTranslateElementInitHeader() {
+				new google.translate.TranslateElement(
+					{
+						pageLanguage: vpageLanguageHeader,
+						includedLanguages: vincludedLanguagesHeader,
+						layout: google.translate.TranslateElement.InlineLayout.VERTICAL,
+						autoDisplay: vautoDisplayHeader,
+						multilanguagePage: vmultilanguagePageHeader,
+						gaTrack: vgaTrackHeader,
+						gaId: vgaIdHeader,
+					},
+					"google_translate_element_header"
+				);
+			}
+		</script>
 	</head>
 	<body>
+		<script>
+			// Function to dynamically load scripts based on window width
+			function loadTranslateScript() {
+				if (window.innerWidth > 1200) {
+					// Load header script
+					var headerScript = document.createElement("script");
+					headerScript.type = "text/javascript";
+					headerScript.src =
+						"//translate.google.com/translate_a/element.js?cb=googleTranslateElementInitHeader";
+					document.head.appendChild(headerScript);
+				} else {
+					// Load body script
+					var bodyScript = document.createElement("script");
+					bodyScript.type = "text/javascript";
+					bodyScript.src =
+						"//translate.google.com/translate_a/element.js?cb=googleTranslateElementInitBody";
+					document.head.appendChild(bodyScript);
+				}
+			}
+
+			// Call the function when the page loads
+			window.onload = loadTranslateScript;
+		</script>
 		<!--Preloader-->
 		<div id="preloader">
 			<div id="loader" class="loader">
@@ -102,16 +148,53 @@
 									>
 										<ul class="navigation">
 											<li><a href="index.html">home</a></li>
-											<li><a href="about.html">About Us</a></li>
-											<li class="active">
-												<a href="services.html">services</a>
+											<li><a href="about.html">about us</a></li>
+											<li class="menu-item-has-children active">
+												<a href="services.html">Our services</a>
+												<ul class="sub-menu">
+													<li>
+														<a href="service-1.html"
+															>The Best Recruitment Office India</a
+														>
+													</li>
+													<li>
+														<a href="service-2.html"
+															>Office Recruitment India Riyadh</a
+														>
+													</li>
+												</ul>
 											</li>
-											<li><a href="team.html">Our Teams</a></li>
-											<li><a href="contact.html">contacts</a></li>
+											<li><a href="agency.html">Agency</a></li>
+											<li>
+												<a href="employment-source.html">Employment Source</a>
+											</li>
+											<li><a href="clients.html">Our Clients</a></li>
+											<li class="menu-item-has-children">
+												<a href="#">Blog</a>
+												<ul class="sub-menu">
+													<li>
+														<a href="blog-1.html">
+															Agencies india mumbai and new delhi</a
+														>
+													</li>
+													<li>
+														<a href="blog-2.html"
+															>Recruitment office india mumbai and new delhi</a
+														>
+													</li>
+												</ul>
+											</li>
 										</ul>
 									</div>
 									<div class="tgmenu__action d-none d-md-block">
 										<ul class="list-wrap">
+											<a
+												id="google_translate_element_header"
+												style="font-size: 12px; padding-left: 20px; color: #000"
+												><span style="font-size: 12px"
+													>Translate this page to
+												</span></a
+											>
 											<li class="offCanvas-menu">
 												<a href="javascript:void(0)" class="menu-tigger">
 													<svg
@@ -158,10 +241,15 @@
 													</svg>
 												</a>
 											</li>
-											<li class="header-btn">
-												<a href="contact.html" class="btn">let’s Talk</a>
-											</li>
 										</ul>
+									</div>
+									<div
+										class="icon-custom d-block d-md-none"
+										style="margin-top: 12px"
+									>
+										<a href="tel:+916392896232"
+											><i class="flaticon-phone-call"></i
+										></a>
 									</div>
 									<div class="mobile-nav-toggler">
 										<svg
@@ -208,6 +296,15 @@
 										</svg>
 									</div>
 								</nav>
+								<div class="translate-styling d-block d-md-none">
+									<a
+										id="google_translate_element_body"
+										style="font-size: 12px; padding-left: 20px; color: #000"
+										><span style="font-size: 12px"
+											>Translate this page to
+										</span></a
+									>
+								</div>
 							</div>
 							<!-- Mobile Menu  -->
 							<div class="tgmobile__menu">
@@ -337,7 +434,7 @@
 											<a href="index.html">Home</a>
 										</li>
 										<li class="breadcrumb-item active" aria-current="page">
-											About
+											Services
 										</li>
 									</ol>
 								</nav>
@@ -362,137 +459,95 @@
 				</div>
 			</section>
 			<!-- breadcrumb-area-end -->
-			<!-- services-area -->
-			<section
-				class="services__area-three services__bg-three"
-				data-background="assets/img/bg/h3_services_bg.jpg"
-			>
+			<!-- project-area -->
+			<section class="project-area pb-0">
 				<div class="container">
 					<div class="row justify-content-center">
-						<div class="col-lg-6">
+						<div class="col-xl-10 col-lg-12">
 							<div
-								class="section-title white-title text-center mb-50 tg-heading-subheading animation-style3"
+								class="section-title text-center mb-50 tg-heading-subheading animation-style3"
 							>
-								<span class="sub-title">WHAT WE OFFER</span>
-								<h2 class="title tg-element-title">
-									Our Manpower Recruitment Services
-								</h2>
+								<span class="sub-title">What We Do</span>
+								<h2 class="title-new">Our Services</h2>
+								<p>
+									The company offers a variety of services that suit individuals
+									and suit all business sectors, and we offer all our services
+									with the highest quality and professionalism to ensure that we
+									meet the requirements of our customers, as follows:
+								</p>
 							</div>
 						</div>
 					</div>
-					<div class="row justify-content-center gutter-24">
-						<div class="col-lg-4 col-md-6">
-							<div class="services__item-three">
-								<div class="services__item-top">
-									<div class="services__icon-three">
-										<i class="flaticon-profit"></i>
+				</div>
+				<div class="project-item-wrap">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="project-item text-center">
+									<div class="project-thumb">
+										<img src="assets/img/global/business-sector.jpg" alt="" />
 									</div>
-									<div class="services__item-top-title">
-										<h2 class="title">Adherence to Recruitment Policies</h2>
+									<div class="project-content">
+										<div class="left-side-content">
+											<h4 class="title">Business Sector Services</h4>
+											<p>
+												We are working to provide self-services on our website
+												with the possibility of connecting human cadres to the
+												customer's headquarters, and we offer a variety of
+												services for individuals represented in (personal
+												assistance - security guard - gardener - traveler -
+												private driver - nanny - hourly labor
+											</p>
+										</div>
 									</div>
 								</div>
-								<div class="services__content-three">
-									<p>
-										We align with your company’s recruitment policies to ensure
-										compliance.
-									</p>
+							</div>
+							<div class="col-md-6">
+								<div class="project-item text-center">
+									<div class="project-thumb">
+										<img src="assets/img/global/individual-sector.jpg" alt="" />
+									</div>
+									<div class="project-content">
+										<div class="left-side-content">
+											<h4 class="title">Individual sector services</h4>
+											<p>
+												We provide our clients with everything related to
+												qualified human cadres brought from outside the Kingdom
+												according to the client’s requirements, whether
+												administrative, technical or professional cadres, while
+												providing consulting services in development through
+												experts and specialists, and we also support the
+												seasonal goals of our clients at the time of increasing
+												requests.
+											</p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="services__item-three">
-								<div class="services__item-top">
-									<div class="services__icon-three">
-										<i class="flaticon-target"></i>
-									</div>
-									<div class="services__top-title">
-										<h2 class="title">Tailored Manpower Solutions</h2>
-									</div>
-								</div>
-								<div class="services__content-three">
-									<p>
-										We provide manpower that perfectly matches the job
-										descriptions given by our esteemed clients.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="services__item-three">
-								<div class="services__item-top">
-									<div class="services__icon-three">
-										<i class="flaticon-financial-profit"></i>
-									</div>
-									<div class="services__top-title">
-										<h2 class="title">Commitment to Worker Quality</h2>
-									</div>
-								</div>
-								<div class="services__content-three">
-									<p>
-										We replace medically unfit or unsuitable workers at our
-										expense during probation.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="services__item-three">
-								<div class="services__item-top">
-									<div class="services__icon-three">
-										<i class="flaticon-piggy-bank"></i>
-									</div>
-									<div class="services__top-title">
-										<h2 class="title">Comprehensive Documentation</h2>
-									</div>
-								</div>
-								<div class="services__content-three">
-									<p>
-										Essential documents like Power of Attorney and Demand Letter
-										are needed before recruitment.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="services__item-three">
-								<div class="services__item-top">
-									<div class="services__icon-three">
-										<i class="flaticon-investment-1"></i>
-									</div>
-									<div class="services__top-title">
-										<h2 class="title">Timely Delivery of Workers</h2>
-									</div>
-								</div>
-								<div class="services__content-three">
-									<p>
-										We guarantee the provision of workers within the time frame
-										specified by our clients, minimizing downtime.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="services__item-three">
-								<div class="services__item-top">
-									<div class="services__icon-three">
-										<i class="flaticon-startup"></i>
-									</div>
-									<div class="services__top-title">
-										<h2 class="title">Interview Arrangement and Hospitality</h2>
-									</div>
-								</div>
-								<div class="services__content-three">
-									<p>
-										We arrange all necessary facilities for interviews, treating
-										our clients with the utmost respect and hospitality.
-									</p>
+						<div class="row justify-content-center">
+							<div class="col-12">
+								<div class="project-content-bottom">
+									<a href="tel:+916392896232" class="btn">Call Us Now</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="project-shape-wrap">
+					<img
+						src="assets/img/project/project_shape01.png"
+						alt=""
+						class="alltuchtopdown"
+					/>
+					<img
+						src="assets/img/project/project_shape02.png"
+						alt=""
+						class="rotateme"
+					/>
+				</div>
 			</section>
-			<!-- services-area-end -->
+			<!-- project-area-end -->
 		</main>
 		<!-- main-area-end -->
 		<!-- footer-area -->
@@ -510,9 +565,9 @@
 									</div>
 									<div class="footer-content">
 										<p>
-											At Global Manpower Resources, we pride ourselves on
-											assembling a team of experts dedicated to selecting the
-											best candidates for our clients.
+											At Touch Travel, we pride ourselves on assembling a team
+											of experts dedicated to selecting the best candidates for
+											our clients.
 										</p>
 										<div class="footer-social">
 											<ul class="list-wrap">
@@ -550,6 +605,7 @@
 													<i class="flaticon-phone-call"></i>
 												</div>
 												<div class="content">
+													<p>Call Us Now</p>
 													<a href="tel:+916392896232">+91 6392896232</a>
 												</div>
 											</li>
@@ -558,6 +614,7 @@
 													<i class="flaticon-envelope"></i>
 												</div>
 												<div class="content">
+													<p>Email Us Now</p>
 													<a href="mailto:khannaushad2818@gmail.com"
 														>khannaushad2818@gmail.com</a
 													>
@@ -585,8 +642,13 @@
 										<ul class="list-wrap">
 											<li><a href="index.html">Home</a></li>
 											<li><a href="about.html">About Us</a></li>
-											<li><a href="services.html">Services</a></li>
-											<li><a href="team.html">Team</a></li>
+											<li><a href="services.html">Our Services</a></li>
+											<li><a href="agency.html">Agency</a></li>
+											<li>
+												<a href="employment-source.html">Employment Source</a>
+											</li>
+											<li><a href="clients.html">Our Clients</a></li>
+											<li><a href="blog-1.html">Blog</a></li>
 											<li><a href="contact.html">Contact Us</a></li>
 										</ul>
 									</div>
@@ -646,21 +708,17 @@
 						</div>
 					</div>
 				</div>
-				<div class="footer-bottom">
+				<!-- <div class="footer-bottom">
 					<div class="container">
 						<div class="row align-items-center">
 							<div class="col-lg-12">
 								<div class="copyright-text text-center">
-									<p>
-										Copyright ©
-										<a href="index.html">Global Manpower Resources</a> | All
-										Right Reserved
-									</p>
+									<p>All Right Reserved</p>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<div class="footer-shape">
 					<img
 						src="assets/img/images/footer_shape01.png"
@@ -699,6 +757,29 @@
 		<script src="assets/js/wow.min.js"></script>
 		<script src="assets/js/aos.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script type="text/javascript">
+			var vpageLanguageBody = "en";
+			var vincludedLanguagesBody = "ar,en"; // Include your desired languages for the body
+			var vautoDisplayBody = true;
+			var vmultilanguagePageBody = true;
+			var vgaTrackBody = true;
+			var vgaIdBody = true ? "" : "";
+
+			function googleTranslateElementInitBody() {
+				new google.translate.TranslateElement(
+					{
+						pageLanguage: vpageLanguageBody,
+						includedLanguages: vincludedLanguagesBody,
+						layout: google.translate.TranslateElement.InlineLayout.VERTICAL,
+						autoDisplay: vautoDisplayBody,
+						multilanguagePage: vmultilanguagePageBody,
+						gaTrack: vgaTrackBody,
+						gaId: vgaIdBody,
+					},
+					"google_translate_element_body"
+				);
+			}
+		</script>
 	</body>
 
 	<!-- Mirrored from apexa-html-demo.vercel.app/services-3 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Aug 2024 05:04:05 GMT -->
