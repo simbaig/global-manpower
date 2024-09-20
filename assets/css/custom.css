@@ -110,3 +110,13 @@
 .project-thumb {
 	overflow: inherit;
 }
+
+.whatsapp {
+	position: fixed;
+	height: 40px;
+	width: 40px;
+	left: 15px;
+	bottom: 15px;
+	cursor: pointer;
+	z-index: 2;
+}
